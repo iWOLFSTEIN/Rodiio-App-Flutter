@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rodiio_app/constants/theme.dart';
 import 'package:rodiio_app/screens/intro.dart';
+import 'package:rodiio_app/screens/invite_and_earn.dart';
 
 void main() {
   runApp(const MyApp());
