@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rodiio_app/constants/theme.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage(
@@ -63,7 +64,7 @@ class IntroPage extends StatelessWidget {
               title,
               style: TextStyle(
                   color: const Color(0xFF1A1A1A),
-                  fontFamily: 'Roboto-Regular',
+                  fontFamily: fontFamilySecondary,
                   fontWeight: FontWeight.bold,
                   fontSize: (enlarge) ? 18.5 : 16.5),
             ),
@@ -76,7 +77,7 @@ class IntroPage extends StatelessWidget {
                 subTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: const Color(0xFF1A1A1A),
+                    color: const Color(0xFF999999),
                     fontSize: (enlarge) ? 15.5 : 13.5),
               ),
             )

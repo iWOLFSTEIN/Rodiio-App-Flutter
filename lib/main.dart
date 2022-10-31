@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rodiio_app/constants/theme.dart';
+import 'package:rodiio_app/screens/create_account.dart';
 import 'package:rodiio_app/screens/intro.dart';
 import 'package:rodiio_app/screens/invite_and_earn.dart';
 
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: primarySwatch,
           primaryColor: primaryColor,
-          fontFamily: fontFamily),
-      home: const InviteAndEarn(),
+          fontFamily: fontFamilyPrimary),
+      home: const CreateAccount(),
     );
   }
 }

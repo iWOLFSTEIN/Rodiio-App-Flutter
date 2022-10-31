@@ -15,5 +15,5 @@ const MaterialColor primarySwatch = MaterialColor(0xFFFFCC00, {
 
 const Color primaryColor = Color(0xFFFFCC00);
 
-const String fontFamily = 'Roboto-Light';
-// 'Montserrat';
+const String fontFamilyPrimary = 'Roboto-Light';
+const String fontFamilySecondary = 'Roboto-Regular';

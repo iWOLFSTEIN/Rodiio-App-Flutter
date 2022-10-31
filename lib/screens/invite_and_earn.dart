@@ -96,7 +96,7 @@ class InviteAndEarn extends StatelessWidget {
         onPressed: action,
         child: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 16,
               color: Color(0xFF333333),
               fontWeight: FontWeight.w600),
