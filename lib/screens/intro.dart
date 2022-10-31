@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/intro_page.dart';
+
 class Intro extends StatefulWidget {
   const Intro({super.key});
 
@@ -13,75 +15,31 @@ class _IntroState extends State<Intro> {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
-      Container(
-        // color: Colors.orange,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 20, left: 20, top: 20),
-              child: Row(
-                children: [
-                  const Text(
-                    'English',
-                    style: TextStyle(
-                      color: Color(0xFF1A1A1A),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Expanded(child: Container()),
-                  const Text(
-                    'Skip',
-                    style: TextStyle(
-                      color: Color(0xFF1A1A1A),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(),
-            Image.asset(
-              'images/RODIIO APP element2.png',
-              height: 170,
-            ),
-            Container(),
-            Column(
-              children: const [
-                Text(
-                  'Welcome to Rodiio Wallet',
-                  style: TextStyle(
-                      color: Color(0xFF1A1A1A),
-                      fontFamily: 'Roboto-Regular',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.5),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 65),
-                  child: Text(
-                    'Start investing and earning fixed returns with us little as 1\$ or sell stocks like Google, Apple, Amazon, Facebook and Microsoft with as little as 10\$',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color(0xFF1A1A1A),
-                        // fontFamily: 'Roboto-Regular',
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 13.5),
-                  ),
-                )
-              ],
-            ),
-            const SizedBox(),
-          ],
-        ),
+      IntroPage(
+        visibility: 1.0,
+        title: 'Welcome to Rodiio Wallet',
+        subTitle:
+            'Start investing and earning fixed returns with us little as 1\$ or sell stocks like Google, Apple, Amazon, Facebook and Microsoft with as little as 10\$',
+        imageAdress: 'images/RODIIO APP element2.png',
+        skipAction: () {},
+        enlarge: false,
       ),
-      Container(
-        color: Colors.green,
+      IntroPage(
+        visibility: 0.0,
+        title: 'Your Better Financial Half',
+        subTitle:
+            "Managing your funds should be the easiest task on your to-do-list, so we created Rodiio just for you.",
+        imageAdress: 'images/RODIIO APP element.png',
+        skipAction: () {},
+        enlarge: false,
       ),
-      Container(
-        color: Colors.blue,
+      IntroPage(
+        visibility: 0.0,
+        title: 'Account Protection',
+        subTitle: "Rodiio is secured. Your money is always safe with us.",
+        imageAdress: 'images/RODIIO APP element3.png',
+        skipAction: () {},
+        enlarge: true,
       ),
     ];
     return Scaffold(
@@ -126,7 +84,7 @@ class _IntroState extends State<Intro> {
                     titleColor: const Color(0xFF1A1A1A),
                   ),
                   const SizedBox(
-                    height: 35,
+                    height: 40,
                   ),
                 ],
               ),

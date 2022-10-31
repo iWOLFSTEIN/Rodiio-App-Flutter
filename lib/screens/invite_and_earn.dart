@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rodiio_app/screens/intro.dart';
 
 class InviteAndEarn extends StatelessWidget {
   const InviteAndEarn({super.key});
@@ -55,7 +56,14 @@ class InviteAndEarn extends StatelessWidget {
               Container(),
               Column(
                 children: [
-                  customButton(title: 'Invite via email', action: () {}),
+                  customButton(
+                      title: 'Invite via email',
+                      action: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Intro()));
+                      }),
                   const SizedBox(
                     height: 15,
                   ),

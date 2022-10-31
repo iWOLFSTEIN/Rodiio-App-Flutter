@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: primarySwatch,
           primaryColor: primaryColor,
           fontFamily: fontFamily),
-      home: const Intro(),
+      home: const InviteAndEarn(),
     );
   }
 }
