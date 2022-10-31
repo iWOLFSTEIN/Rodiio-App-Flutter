@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rodiio_app/constants/theme.dart';
+import 'package:rodiio_app/screens/login.dart';
 
+import '../widgets/custom_small_button.dart';
 import '../widgets/custom_text_field.dart';
 
 class CreateAccount extends StatefulWidget {
@@ -24,7 +26,10 @@ class _CreateAccountState extends State<CreateAccount> {
           children: [
             Column(
               children: [
-                title(signInAction: () {}),
+                title(signInAction: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Login()));
+                }),
                 const SizedBox(
                   height: 30,
                 ),
@@ -131,44 +136,6 @@ class _CreateAccountState extends State<CreateAccount> {
           ],
         )
       ],
-    );
-  }
-}
-
-class CustomSmallButton extends StatelessWidget {
-  const CustomSmallButton({
-    required this.action,
-    required this.title,
-    required this.borderColor,
-    required this.buttonColor,
-    required this.titleColor,
-    Key? key,
-  }) : super(key: key);
-
-  final String title;
-  final Color titleColor;
-  final Color buttonColor;
-  final Color borderColor;
-  final Function() action;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40,
-      width: 125,
-      decoration: BoxDecoration(
-          border: Border.all(color: borderColor),
-          color: buttonColor,
-          borderRadius: const BorderRadius.all(Radius.circular(17.5))),
-      child: TextButton(
-        onPressed: action,
-        child: Text(
-          title,
-          style: TextStyle(
-              color: titleColor,
-              fontSize: 16.5,
-              fontFamily: fontFamilySecondary),
-        ),
-      ),
     );
   }
 }
