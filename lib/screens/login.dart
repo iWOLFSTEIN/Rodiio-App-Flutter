@@ -1,6 +1,7 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:rodiio_app/screens/create_account.dart';
+import 'package:rodiio_app/screens/email_verification.dart';
 
 import '../widgets/custom_small_button.dart';
 import '../widgets/custom_text_field.dart';
@@ -15,6 +16,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final _phoneController = TextEditingController();
   final _passwordController = TextEditingController();
+
+  final a = Login();
 
   String? countryFlag;
   @override
@@ -59,7 +62,13 @@ class _LoginState extends State<Login> {
                   height: 25,
                 ),
                 GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EmailVerification(),
+                          ));
+                    },
                     child: const Text(
                       'Forgot your passowrd',
                       style:

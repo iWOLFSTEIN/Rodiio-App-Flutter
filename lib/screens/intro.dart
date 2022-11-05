@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_text_button.dart';
 import '../widgets/intro_page.dart';
 
 class Intro extends StatefulWidget {
@@ -68,21 +69,19 @@ class _IntroState extends State<Intro> {
                   const SizedBox(
                     height: 17.5,
                   ),
-                  customButton(
-                    title: 'Start Building wealth',
-                    action: () {},
-                    buttonColor: const Color(0xFF1A1A1A),
-                    titleColor: Colors.white,
-                  ),
+                  CustomTextButton(
+                      title: 'Start Building wealth',
+                      action: () {},
+                      buttonColor: const Color(0xFF1A1A1A),
+                      titleColor: Colors.white),
                   const SizedBox(
                     height: 17.5,
                   ),
-                  customButton(
-                    title: 'Have an account? Log In',
-                    action: () {},
-                    buttonColor: const Color(0xFFFFCC00),
-                    titleColor: const Color(0xFF1A1A1A),
-                  ),
+                  CustomTextButton(
+                      title: 'Have an account? Log In',
+                      action: () {},
+                      buttonColor: const Color(0xFFFFCC00),
+                      titleColor: const Color(0xFF1A1A1A)),
                   const SizedBox(
                     height: 40,
                   ),
@@ -120,28 +119,6 @@ class _IntroState extends State<Intro> {
               ),
             ));
       }).toList(),
-    );
-  }
-
-  Container customButton(
-      {required title,
-      required action,
-      required buttonColor,
-      required titleColor}) {
-    return Container(
-      height: 50,
-      width: double.infinity,
-      decoration: BoxDecoration(
-          color: buttonColor,
-          borderRadius: const BorderRadius.all(Radius.circular(15))),
-      child: TextButton(
-        onPressed: action,
-        child: Text(
-          title,
-          style: TextStyle(
-              color: titleColor, fontFamily: 'Roboto-Regular', fontSize: 16),
-        ),
-      ),
     );
   }
 }

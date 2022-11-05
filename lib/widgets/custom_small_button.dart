@@ -31,9 +31,7 @@ class CustomSmallButton extends StatelessWidget {
         child: Text(
           title,
           style: TextStyle(
-              color: titleColor,
-              fontSize: 16.5,
-              fontFamily: fontFamilySecondary),
+              color: titleColor, fontSize: 16, fontFamily: fontFamilySecondary),
         ),
       ),
     );
